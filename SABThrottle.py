@@ -12,7 +12,7 @@ SAB_API = config['SAB_API']
 SAB_PORT = config['SAB_PORT']
 
 PMS_URL = 'http://%s:%s/status/sessions' % (PMS_IP, PMS_PORT)
-SAB_URL = 'http://%s/sabnzbd:%s/api?mode=config&name=speedlimit&apikey=%s&value=' % (SAB_URL, SAB_API, SAB_PORT)
+SAB_URL = 'http://%s:%s/sabnzbd/api?mode=config&name=speedlimit&apikey=%s&value=' % (SAB_URL, SAB_PORT, SAB_API)
 
 def get_active_streams(url):
 	dom = minidom.parse(urllib.urlopen(url))
