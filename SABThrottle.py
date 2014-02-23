@@ -22,7 +22,7 @@ def get_active_streams(url):
 		
 active_steams = get_active_streams(PMS_URL)
 
-elif active_steams >= 1:
+if active_steams >= 1:
 	speed = config['LIMIT']
 else:
 	speed = config['NO_LIMIT']
